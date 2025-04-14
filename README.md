@@ -3,42 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Let's Travel by Vijay</title>
+  <title>Let’s Travel by Vijay</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      color: white;
     }
-    header {
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
       text-align: center;
-      padding: 60px 20px 20px;
+      padding: 80px 20px;
     }
-    header h1 {
+    h1 {
       font-size: 3em;
       margin-bottom: 10px;
     }
-    header p {
+    p {
       font-size: 1.2em;
-      color: #ccc;
-    }
-    .hero {
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .hero iframe {
-      width: 90%;
-      max-width: 700px;
-      height: 400px;
-      border-radius: 12px;
-      border: none;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
-    .cta {
-      margin-top: 40px;
-      text-align: center;
+      color: #ddd;
+      margin-bottom: 30px;
     }
     .cta a {
       background: #e52d27;
@@ -52,46 +59,33 @@
     .cta a:hover {
       background: #ff5f6d;
     }
-    .about {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-    .about h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .about p {
-      font-size: 1.1em;
-      color: #ddd;
-    }
     footer {
       text-align: center;
-      padding: 30px 10px;
-      background: #111;
-      color: #aaa;
+      padding: 20px;
+      background: rgba(0,0,0,0.8);
       font-size: 0.9em;
+      color: #bbb;
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Let’s Travel by Vijay</h1>
-    <p>Discover beautiful destinations. One short at a time.</p>
-  </header>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="video-bg">
+    <source src="https://www.videvo.net/videvo_files/converted/2016_07/preview/Mountain_Snow_Scenery.mp439163.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
 
-  <div class="hero">
-    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=LetsTravel-by_Vijay" allowfullscreen></iframe>
+  <div class="overlay"></div>
+
+  <div class="content">
+    <h1>Let’s Travel by Vijay</h1>
+    <p>Travel the world in 60 seconds – Experience the beauty of places like Sar Pass and beyond!</p>
     <div class="cta">
       <a href="https://www.youtube.com/@LetsTravel-by_Vijay" target="_blank">Subscribe on YouTube</a>
     </div>
-  </div>
-
-  <div class="about">
-    <h2>About the Channel</h2>
-    <p>Welcome to “Let’s Travel by Vijay” – your go-to spot for travel inspiration in 60 seconds or less! Whether it's mountains, beaches, or hidden gems, I take you there through stunning YouTube Shorts that capture the magic of every destination. Join me on this journey and turn wanderlust into reality!</p>
   </div>
 
   <footer>
@@ -99,4 +93,4 @@
   </footer>
 
 </body>
-</html># lets-travel-by-vijay
+</html>
